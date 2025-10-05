@@ -3,8 +3,11 @@
 
 int main()
 {
-    for(int i=0; i<=100; i+=10) {
+    for(int i=0; i<=100; i+=20) {
         fprintf(stdout, "%d\n", i);
-        usleep(200000);
+        fflush(stdout);
+        usleep(500000);
     }
+    
+    return(0);
 }
