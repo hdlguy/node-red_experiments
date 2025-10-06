@@ -1,0 +1,221 @@
+[
+    {
+        "id": "cb50a8704c6444bd",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e2d620989bda970e",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "75b8784ae777e702",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "716ca432d9c95081",
+        "type": "ui-page",
+        "name": "Page 1",
+        "ui": "e2d620989bda970e",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "75b8784ae777e702",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "d3b5bd763daa6b02",
+        "type": "ui-group",
+        "name": "Group 1",
+        "page": "716ca432d9c95081",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": true,
+        "disabled": false,
+        "groupType": "default"
+    },
+    {
+        "id": "78111977b42d65f9",
+        "type": "ui-button",
+        "z": "cb50a8704c6444bd",
+        "group": "d3b5bd763daa6b02",
+        "name": "",
+        "label": "Start",
+        "order": 1,
+        "width": "1",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 210,
+        "y": 140,
+        "wires": [
+            [
+                "1d5e9a5c37482c35"
+            ]
+        ]
+    },
+    {
+        "id": "1d5e9a5c37482c35",
+        "type": "exec",
+        "z": "cb50a8704c6444bd",
+        "command": "/home/pedro/github/node-red_experiments/c2progress/c_code/gen_percent",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "gen_percent",
+        "x": 390,
+        "y": 140,
+        "wires": [
+            [
+                "8168da2e8d1e0ba9",
+                "37cbf55a2af3d5af"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "8168da2e8d1e0ba9",
+        "type": "debug",
+        "z": "cb50a8704c6444bd",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "6250c9264458f689",
+        "type": "ui-progress",
+        "z": "cb50a8704c6444bd",
+        "group": "d3b5bd763daa6b02",
+        "name": "",
+        "label": "Progress",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "color": "",
+        "className": "",
+        "x": 820,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "37cbf55a2af3d5af",
+        "type": "change",
+        "z": "cb50a8704c6444bd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$number(msg.payload)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 120,
+        "wires": [
+            [
+                "6250c9264458f689"
+            ]
+        ]
+    }
+]
