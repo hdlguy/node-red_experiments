@@ -28,25 +28,6 @@
         "allowInstall": false
     },
     {
-        "id": "75b8784ae777e702",
-        "type": "ui-theme",
-        "name": "Default Theme",
-        "colors": {
-            "surface": "#ffffff",
-            "primary": "#0094CE",
-            "bgPage": "#eeeeee",
-            "groupBg": "#ffffff",
-            "groupOutline": "#cccccc"
-        },
-        "sizes": {
-            "density": "default",
-            "pagePadding": "12px",
-            "groupGap": "12px",
-            "groupBorderRadius": "4px",
-            "widgetGap": "12px"
-        }
-    },
-    {
         "id": "716ca432d9c95081",
         "type": "ui-page",
         "name": "Page 1",
@@ -97,6 +78,73 @@
         "groupType": "default"
     },
     {
+        "id": "1d5e9a5c37482c35",
+        "type": "exec",
+        "z": "cb50a8704c6444bd",
+        "command": "/home/pedro/github/node-red_experiments/c2progress/c_code/gen_percent",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "gen_percent",
+        "x": 390,
+        "y": 140,
+        "wires": [
+            [
+                "8168da2e8d1e0ba9",
+                "37cbf55a2af3d5af"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "8168da2e8d1e0ba9",
+        "type": "debug",
+        "z": "cb50a8704c6444bd",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "37cbf55a2af3d5af",
+        "type": "change",
+        "z": "cb50a8704c6444bd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$number(msg.payload)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 120,
+        "wires": [
+            [
+                "6250c9264458f689"
+            ]
+        ]
+    },
+    {
         "id": "78111977b42d65f9",
         "type": "ui-button",
         "z": "cb50a8704c6444bd",
@@ -136,46 +184,6 @@
         ]
     },
     {
-        "id": "1d5e9a5c37482c35",
-        "type": "exec",
-        "z": "cb50a8704c6444bd",
-        "command": "/home/pedro/github/node-red_experiments/c2progress/c_code/gen_percent",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "true",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "gen_percent",
-        "x": 390,
-        "y": 140,
-        "wires": [
-            [
-                "8168da2e8d1e0ba9",
-                "37cbf55a2af3d5af"
-            ],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "8168da2e8d1e0ba9",
-        "type": "debug",
-        "z": "cb50a8704c6444bd",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 660,
-        "y": 200,
-        "wires": []
-    },
-    {
         "id": "6250c9264458f689",
         "type": "ui-progress",
         "z": "cb50a8704c6444bd",
@@ -190,32 +198,5 @@
         "x": 820,
         "y": 120,
         "wires": []
-    },
-    {
-        "id": "37cbf55a2af3d5af",
-        "type": "change",
-        "z": "cb50a8704c6444bd",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$number(msg.payload)",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 120,
-        "wires": [
-            [
-                "6250c9264458f689"
-            ]
-        ]
     }
 ]
