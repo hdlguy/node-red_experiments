@@ -1,6 +1,6 @@
 [
     {
-        "id": "277bc44183afda79",
+        "id": "17870e65b49ecbdc",
         "type": "tab",
         "label": "Flow 1",
         "disabled": false,
@@ -8,18 +8,18 @@
         "env": []
     },
     {
-        "id": "c2e1aa56f50f03bd",
+        "id": "72c1e5a9ec204878",
         "type": "ui-base",
-        "name": "Dashboard",
+        "name": "My Dashboard",
         "path": "/dashboard",
         "includeClientData": true,
         "acceptsClientConfig": [
+            "ui-notification",
             "ui-control",
-            "ui-notification"
+            "ui-chart"
         ],
         "showPathInSidebar": false,
-        "headerContent": "none",
-        "navigationStyle": "icon",
+        "navigationStyle": "default",
         "titleBarStyle": "default"
     },
     {
@@ -41,12 +41,12 @@
         }
     },
     {
-        "id": "d0621b8f20aee671",
+        "id": "39fae809f6f7fc7b",
         "type": "ui-page",
         "name": "Charts",
-        "ui": "c2e1aa56f50f03bd",
-        "path": "/charts",
-        "icon": "home",
+        "ui": "72c1e5a9ec204878",
+        "path": "/charts-example",
+        "icon": "chart-box-outline",
         "layout": "notebook",
         "theme": "5075a7d8e4947586",
         "order": 1,
@@ -55,54 +55,54 @@
         "disabled": "false"
     },
     {
-        "id": "8de7b0ba54b83e6a",
+        "id": "4dc3a5580f655534",
         "type": "ui-group",
-        "name": "Line Charts",
-        "page": "d0621b8f20aee671",
+        "name": "Scatter Plot Group",
+        "page": "39fae809f6f7fc7b",
         "width": "6",
         "height": "1",
-        "order": 1,
-        "showTitle": true,
+        "order": 5,
+        "showTitle": false,
         "className": "",
         "visible": "true",
         "disabled": "false"
     },
     {
-        "id": "f2b32a695a996008",
+        "id": "a924b771a10b19ba",
         "type": "ui-chart",
-        "z": "277bc44183afda79",
-        "group": "8de7b0ba54b83e6a",
-        "name": "",
-        "label": "chart",
-        "order": 2,
+        "z": "17870e65b49ecbdc",
+        "group": "4dc3a5580f655534",
+        "name": "Chart: Scatter",
+        "label": "Scatter Plot Example",
+        "order": 5,
         "chartType": "line",
         "category": "",
         "categoryType": "none",
-        "xAxisLabel": "sample",
-        "xAxisProperty": "",
+        "xAxisLabel": "x",
+        "xAxisProperty": "x",
         "xAxisPropertyType": "property",
-        "xAxisType": "category",
+        "xAxisType": "linear",
         "xAxisFormat": "",
         "xAxisFormatType": "auto",
         "xmin": "",
         "xmax": "",
-        "yAxisLabel": "amplitude",
-        "yAxisProperty": "",
+        "yAxisLabel": "y",
+        "yAxisProperty": "y",
         "yAxisPropertyType": "property",
         "ymin": "",
         "ymax": "",
         "bins": "",
         "action": "append",
         "stackSeries": false,
-        "pointShape": "false",
-        "pointRadius": "10",
+        "pointShape": "circle",
+        "pointRadius": 4,
         "showLegend": true,
         "removeOlder": 1,
         "removeOlderUnit": "3600",
         "removeOlderPoints": "",
         "colors": [
-            "#1f77b4",
-            "#aec7e8",
+            "#0095ff",
+            "#ff0000",
             "#ff7f0e",
             "#2ca02c",
             "#98df8a",
@@ -123,69 +123,57 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 850,
-        "y": 500,
+        "x": 660,
+        "y": 420,
         "wires": [
             []
         ]
     },
     {
-        "id": "c624c1ca7c57bb20",
-        "type": "comment",
-        "z": "277bc44183afda79",
-        "name": "README",
-        "info": "No need to define \"x\" and \"y\" properties here,\nas the incoming value is a single number.\n\nSo, \"y\" will take that value, and the \"x\"\nvalue will just use the time upon\nreceiving that data.",
-        "x": 400,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "f1b47a293fb0a19b",
+        "id": "6e0e605e744ac767",
         "type": "debug",
-        "z": "277bc44183afda79",
+        "z": "17870e65b49ecbdc",
         "name": "debug 1",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
+        "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 860,
-        "y": 380,
+        "x": 660,
+        "y": 580,
         "wires": []
     },
     {
-        "id": "0ea76b27e529cb17",
+        "id": "9f851f192bab3d07",
         "type": "function",
-        "z": "277bc44183afda79",
-        "name": "clear chart",
-        "func": "var msg1;\n\nmsg1 = {payload: []};\nnode.send([msg1]);\n",
+        "z": "17870e65b49ecbdc",
+        "name": "function 1",
+        "func": "var msg1;\n\n//[{\"series\":\"A\",\"x\":5,\"y\":84},{\"series\":\"A\",\"x\":9,\"y\":10},{\"series\":\"A\",\"x\":11,\"y\":70},{\"series\":\"B\",\"x\":12,\"y\":28},{\"series\":\"B\",\"x\":15,\"y\":35},{\"series\":\"B\",\"x\":26,\"y\":42},{\"series\":\"C\",\"x\":20,\"y\":12},{\"series\":\"C\",\"x\":24,\"y\":54},{\"series\":\"C\",\"x\":27,\"y\":60},{\"series\":\"C\",\"x\":30,\"y\":66}]\n\nmsg1 = {payload: []};\nnode.send(msg1);\n\nmsg1 = {payload: [{ \"series\": \"A\", \"x\": 1, \"y\": Math.random() }, { \"series\": \"A\", \"x\": 2, \"y\": Math.random() }, { \"series\": \"A\", \"x\": 3, \"y\": Math.random() }]};\n\n\nnode.send(msg1);\n\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 590,
-        "y": 440,
+        "x": 400,
+        "y": 460,
         "wires": [
             [
-                "f2b32a695a996008",
-                "f1b47a293fb0a19b",
-                "686d9f017babb26e"
+                "a924b771a10b19ba",
+                "6e0e605e744ac767"
             ]
         ]
     },
     {
-        "id": "dbcc4dcc5b5b563c",
+        "id": "90cb076178cbfb95",
         "type": "ui-button",
-        "z": "277bc44183afda79",
-        "group": "8de7b0ba54b83e6a",
+        "z": "17870e65b49ecbdc",
+        "group": "4dc3a5580f655534",
         "name": "",
         "label": "button",
-        "order": 1,
+        "order": 0,
         "width": 0,
         "height": 0,
         "emulateClick": false,
@@ -209,57 +197,11 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 410,
-        "y": 440,
+        "x": 190,
+        "y": 460,
         "wires": [
             [
-                "0ea76b27e529cb17"
-            ]
-        ]
-    },
-    {
-        "id": "552722d4abe3c2f0",
-        "type": "function",
-        "z": "277bc44183afda79",
-        "name": "waveform",
-        "func": "var msg1;\n\nfor (let i = 0; i < 10; i++) {\n    msg1 = {payload: [i]};\n    node.send([msg1]);\n}\n\n\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 580,
-        "y": 500,
-        "wires": [
-            [
-                "f1b47a293fb0a19b",
-                "f2b32a695a996008"
-            ]
-        ]
-    },
-    {
-        "id": "686d9f017babb26e",
-        "type": "delay",
-        "z": "277bc44183afda79",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "100",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 430,
-        "y": 500,
-        "wires": [
-            [
-                "552722d4abe3c2f0"
+                "9f851f192bab3d07"
             ]
         ]
     }
