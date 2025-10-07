@@ -1,6 +1,6 @@
 [
     {
-        "id": "cb50a8704c6444bd",
+        "id": "277bc44183afda79",
         "type": "tab",
         "label": "Flow 1",
         "disabled": false,
@@ -8,102 +8,141 @@
         "env": []
     },
     {
-        "id": "e2d620989bda970e",
+        "id": "c2e1aa56f50f03bd",
         "type": "ui-base",
-        "name": "My Dashboard",
+        "name": "Dashboard",
         "path": "/dashboard",
-        "appIcon": "",
         "includeClientData": true,
         "acceptsClientConfig": [
-            "ui-notification",
-            "ui-control"
+            "ui-control",
+            "ui-notification"
         ],
         "showPathInSidebar": false,
-        "headerContent": "page",
-        "navigationStyle": "default",
-        "titleBarStyle": "default",
-        "showReconnectNotification": true,
-        "notificationDisplayTime": 1,
-        "showDisconnectNotification": true,
-        "allowInstall": false
+        "headerContent": "none",
+        "navigationStyle": "icon",
+        "titleBarStyle": "default"
     },
     {
-        "id": "716ca432d9c95081",
+        "id": "5075a7d8e4947586",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "d0621b8f20aee671",
         "type": "ui-page",
-        "name": "Page 1",
-        "ui": "e2d620989bda970e",
-        "path": "/page1",
+        "name": "Charts",
+        "ui": "c2e1aa56f50f03bd",
+        "path": "/charts",
         "icon": "home",
-        "layout": "grid",
-        "theme": "75b8784ae777e702",
-        "breakpoints": [
-            {
-                "name": "Default",
-                "px": 0,
-                "cols": 3
-            },
-            {
-                "name": "Tablet",
-                "px": 576,
-                "cols": 6
-            },
-            {
-                "name": "Small Desktop",
-                "px": 768,
-                "cols": 9
-            },
-            {
-                "name": "Desktop",
-                "px": 1024,
-                "cols": 12
-            }
-        ],
+        "layout": "notebook",
+        "theme": "5075a7d8e4947586",
         "order": 1,
         "className": "",
         "visible": "true",
         "disabled": "false"
     },
     {
-        "id": "d3b5bd763daa6b02",
+        "id": "8de7b0ba54b83e6a",
         "type": "ui-group",
-        "name": "Group 1",
-        "page": "716ca432d9c95081",
-        "width": 6,
-        "height": 1,
+        "name": "Line Charts",
+        "page": "d0621b8f20aee671",
+        "width": "6",
+        "height": "1",
         "order": 1,
         "showTitle": true,
         "className": "",
-        "visible": true,
-        "disabled": false,
-        "groupType": "default"
+        "visible": "true",
+        "disabled": "false"
     },
     {
-        "id": "1d5e9a5c37482c35",
-        "type": "exec",
-        "z": "cb50a8704c6444bd",
-        "command": "/home/pedro/github/node-red_experiments/c2progress/c_code/gen_percent",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "true",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "gen_percent",
-        "x": 390,
-        "y": 140,
+        "id": "f2b32a695a996008",
+        "type": "ui-chart",
+        "z": "277bc44183afda79",
+        "group": "8de7b0ba54b83e6a",
+        "name": "",
+        "label": "chart",
+        "order": 2,
+        "chartType": "line",
+        "category": "",
+        "categoryType": "none",
+        "xAxisLabel": "sample",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "property",
+        "xAxisType": "category",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "amplitude",
+        "yAxisProperty": "",
+        "yAxisPropertyType": "property",
+        "ymin": "",
+        "ymax": "",
+        "bins": "",
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "false",
+        "pointRadius": "10",
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 850,
+        "y": 500,
         "wires": [
-            [
-                "8168da2e8d1e0ba9",
-                "37cbf55a2af3d5af"
-            ],
-            [],
             []
         ]
     },
     {
-        "id": "8168da2e8d1e0ba9",
+        "id": "c624c1ca7c57bb20",
+        "type": "comment",
+        "z": "277bc44183afda79",
+        "name": "README",
+        "info": "No need to define \"x\" and \"y\" properties here,\nas the incoming value is a single number.\n\nSo, \"y\" will take that value, and the \"x\"\nvalue will just use the time upon\nreceiving that data.",
+        "x": 400,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "f1b47a293fb0a19b",
         "type": "debug",
-        "z": "cb50a8704c6444bd",
+        "z": "277bc44183afda79",
         "name": "debug 1",
         "active": true,
         "tosidebar": true,
@@ -113,47 +152,42 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 660,
-        "y": 260,
+        "x": 860,
+        "y": 380,
         "wires": []
     },
     {
-        "id": "37cbf55a2af3d5af",
-        "type": "change",
-        "z": "cb50a8704c6444bd",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$number(msg.payload)",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 120,
+        "id": "0ea76b27e529cb17",
+        "type": "function",
+        "z": "277bc44183afda79",
+        "name": "clear chart",
+        "func": "var msg1;\n\nmsg1 = {payload: []};\nnode.send([msg1]);\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 440,
         "wires": [
             [
-                "6250c9264458f689"
+                "f2b32a695a996008",
+                "f1b47a293fb0a19b",
+                "686d9f017babb26e"
             ]
         ]
     },
     {
-        "id": "78111977b42d65f9",
+        "id": "dbcc4dcc5b5b563c",
         "type": "ui-button",
-        "z": "cb50a8704c6444bd",
-        "group": "d3b5bd763daa6b02",
+        "z": "277bc44183afda79",
+        "group": "8de7b0ba54b83e6a",
         "name": "",
-        "label": "Start",
+        "label": "button",
         "order": 1,
-        "width": "1",
-        "height": "1",
+        "width": 0,
+        "height": 0,
         "emulateClick": false,
         "tooltip": "",
         "color": "",
@@ -175,28 +209,58 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 210,
-        "y": 140,
+        "x": 410,
+        "y": 440,
         "wires": [
             [
-                "1d5e9a5c37482c35"
+                "0ea76b27e529cb17"
             ]
         ]
     },
     {
-        "id": "6250c9264458f689",
-        "type": "ui-progress",
-        "z": "cb50a8704c6444bd",
-        "group": "d3b5bd763daa6b02",
+        "id": "552722d4abe3c2f0",
+        "type": "function",
+        "z": "277bc44183afda79",
+        "name": "waveform",
+        "func": "var msg1;\n\nfor (let i = 0; i < 10; i++) {\n    msg1 = {payload: [i]};\n    node.send([msg1]);\n}\n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 500,
+        "wires": [
+            [
+                "f1b47a293fb0a19b",
+                "f2b32a695a996008"
+            ]
+        ]
+    },
+    {
+        "id": "686d9f017babb26e",
+        "type": "delay",
+        "z": "277bc44183afda79",
         "name": "",
-        "label": "Progress",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "color": "",
-        "className": "",
-        "x": 820,
-        "y": 120,
-        "wires": []
+        "pauseType": "delay",
+        "timeout": "100",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 430,
+        "y": 500,
+        "wires": [
+            [
+                "552722d4abe3c2f0"
+            ]
+        ]
     }
 ]
