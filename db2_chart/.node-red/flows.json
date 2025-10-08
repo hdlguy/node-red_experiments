@@ -49,6 +49,28 @@
         "icon": "chart-box-outline",
         "layout": "notebook",
         "theme": "5075a7d8e4947586",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
         "order": 1,
         "className": "",
         "visible": "true",
@@ -92,7 +114,7 @@
         "ymin": "",
         "ymax": "",
         "bins": "",
-        "action": "append",
+        "action": "replace",
         "stackSeries": false,
         "pointShape": "false",
         "pointRadius": 4,
@@ -150,7 +172,7 @@
         "type": "function",
         "z": "17870e65b49ecbdc",
         "name": "function 1",
-        "func": "const Nsamp = 200;\nconst Gnoise = 1000;\nconst Gsine = 10000;\n\nvar msg1;\n\nmsg1 = {payload: []};\nnode.send(msg1);\n\nvar yval;\nvar datarray = [];\nfor(let i=0; i<Nsamp; i++) {\n\n    yval = Math.round(Gnoise*(2.0*Math.random()-1.0) + Gsine*Math.sin(2.0*Math.PI*i/Nsamp));\n\n    datarray[i] = {\"Series\":\"A\", \"x\":i, \"y\":yval};\n\n}\n\nmsg1 = {payload: datarray};\nnode.send(msg1);\n\n\n",
+        "func": "const Nsamp = 2000;\nconst Gnoise = 1000;\nconst Gsine = 10000;\n\nvar msg1;\n\nvar yval;\nvar datarray = [Nsamp];\nfor(let i=0; i<Nsamp; i++) {\n\n    yval = Math.round(Gnoise*(2.0*Math.random()-1.0) + Gsine*Math.sin(2.0*Math.PI*i/Nsamp));\n\n    datarray[i] = { \"x\": i, \"y\": yval };\n\n}\n\nmsg1 = {payload: datarray};\nnode.send(msg1);\n\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
