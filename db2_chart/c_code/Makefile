@@ -1,4 +1,4 @@
-ALL_EXE = json_gen
+ALL_EXE = json_gen db1_json_gen
 
 all: $(ALL_EXE) 
 
