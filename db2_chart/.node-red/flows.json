@@ -221,7 +221,7 @@
         "z": "17870e65b49ecbdc",
         "group": "4dc3a5580f655534",
         "name": "Chart: Scatter",
-        "label": "Scatter Plot Example",
+        "label": "Line Plot Example",
         "order": 1,
         "chartType": "line",
         "category": "",
@@ -242,7 +242,7 @@
         "bins": "",
         "action": "replace",
         "stackSeries": false,
-        "pointShape": "circle",
+        "pointShape": "false",
         "pointRadius": 4,
         "showLegend": true,
         "removeOlder": 1,
@@ -270,7 +270,7 @@
         "width": "12",
         "height": "6",
         "className": "",
-        "interpolation": "step",
+        "interpolation": "linear",
         "x": 1480,
         "y": 380,
         "wires": [
@@ -338,11 +338,11 @@
         "type": "trigger",
         "z": "17870e65b49ecbdc",
         "name": "",
-        "op1": "1",
+        "op1": "true",
         "op2": "0",
-        "op1type": "str",
+        "op1type": "bool",
         "op2type": "str",
-        "duration": "-200",
+        "duration": "-500",
         "extend": false,
         "overrideDelay": false,
         "units": "ms",
@@ -366,7 +366,7 @@
         "label": "continuous trigger",
         "group": "4dc3a5580f655534",
         "order": 3,
-        "width": "2",
+        "width": "4",
         "height": "1",
         "passthru": false,
         "decouple": false,
@@ -396,7 +396,7 @@
         "id": "a29689e4fc22deb9",
         "type": "exec",
         "z": "17870e65b49ecbdc",
-        "command": "/home/pedro/github/node-red_experiments/db2_chart/c_code/json_gen 10",
+        "command": "/home/pedro/github/node-red_experiments/db2_chart/c_code/json_gen 1000",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
@@ -404,7 +404,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 880,
+        "x": 890,
         "y": 380,
         "wires": [
             [
@@ -456,7 +456,7 @@
         "op2": "0",
         "op1type": "str",
         "op2type": "str",
-        "duration": "-100",
+        "duration": "-200",
         "extend": false,
         "overrideDelay": false,
         "units": "ms",
@@ -484,7 +484,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 890,
+        "x": 930,
         "y": 400,
         "wires": [
             [
@@ -502,12 +502,11 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1270,
+        "x": 1350,
         "y": 400,
         "wires": [
             [
-                "6ca873542bd5e51d",
-                "357ecabea2ae1661"
+                "6ca873542bd5e51d"
             ]
         ]
     },
@@ -520,8 +519,8 @@
         "tooltip": "",
         "group": "708dd1cf088e8012",
         "order": 3,
-        "width": 0,
-        "height": 0,
+        "width": "4",
+        "height": "1",
         "passthru": true,
         "decouple": "false",
         "topic": "topic",
@@ -611,7 +610,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1430,
+        "x": 1510,
         "y": 400,
         "wires": [
             []

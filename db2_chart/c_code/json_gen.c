@@ -14,14 +14,19 @@ int main(int argc, char** argv)
 {
     uint32_t num_vals = atoi(argv[1]);
 
-    const float Gnoise = 1000.0;
+    const float Gnoise = 2000.0;
     const float Gsine  = 10000.0;
+    const float Fsine = 1.0/100.0;
 
     // compute the data
-    srand(time(NULL));
+    //srand(time(NULL));
+    struct timespec ts;
+    clock_gettime(CLOCK_REALTIME, &ts);
+    srand(ts.tv_nsec);
+
     int32_t data[MAX_SAMPLES];
     for(uint32_t i=0; i<num_vals; i++) {
-        data[i] = roundf( Gnoise*2.0*rand()/RAND_MAX - 1.0 + Gsine*sinf(2.0*M_PI*i/num_vals) );
+        data[i] = roundf( Gnoise*(2.0*rand()/RAND_MAX - 1.0) + Gsine*sinf(2.0*M_PI*Fsine*i) );
     }
 
 
