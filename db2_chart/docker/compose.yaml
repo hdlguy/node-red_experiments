@@ -1,5 +1,5 @@
 services:
-  web:
+  node-red:
     build: .
     ports:
       - "1880:1880"

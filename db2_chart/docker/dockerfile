@@ -3,9 +3,9 @@
 
 FROM nodered/node-red
 
-WORKDIR /code
+WORKDIR /
 
-EXPOSE 1880
+#EXPOSE 1880
 
-CMD ["node-red"]
+#CMD ["node-red"]
 
