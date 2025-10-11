@@ -1,11 +1,20 @@
 
-#docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node-red
+# Use official Node-RED base image (based on Node.js LTS)
+FROM nodered/node-red:latest
 
-FROM nodered/node-red
+# create an environment variable to point to the compiled C commands
+ENV C_BIN_PATH=/usr/src/node-red/c_code
 
-WORKDIR /
+# Copy your Node-RED flow
+COPY flows/flows.json /data/flows.json
+#COPY flows/settings.js /data/settings.js
 
-#EXPOSE 1880
+# Copy C command and compile
+RUN cd && mkdir c_code
+COPY c_code/json_gen.c c_code/json_gen.c
+COPY c_code/Makefile c_code/Makefile
+RUN cd c_code && make && cd
 
-#CMD ["node-red"]
+
+
 

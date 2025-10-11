@@ -290,7 +290,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1500,
+        "x": 1440,
         "y": 200,
         "wires": []
     },
@@ -396,7 +396,7 @@
         "id": "a29689e4fc22deb9",
         "type": "exec",
         "z": "17870e65b49ecbdc",
-        "command": "/home/pedro/github/node-red_experiments/db2_chart/c_code/json_gen 1000",
+        "command": "${C_BIN_PATH}/json_gen 1000",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
@@ -404,7 +404,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 890,
+        "x": 750,
         "y": 380,
         "wires": [
             [

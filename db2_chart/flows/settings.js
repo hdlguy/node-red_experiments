@@ -20,6 +20,9 @@
  *
  **/
 
+// path to compiled C code
+process.env.C_BIN_PATH = "/home/pedro/github/node-red_experiments/db2_chart/c_code";
+
 module.exports = {
 
 /*******************************************************************************
