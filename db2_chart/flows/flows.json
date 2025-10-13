@@ -28,6 +28,25 @@
         "allowInstall": true
     },
     {
+        "id": "177731b725387814",
+        "type": "ui-theme",
+        "name": "instrument theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094ce",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
         "id": "0a6cef5a1c524f2d",
         "type": "ui-page",
         "name": "plot",
@@ -78,25 +97,6 @@
         "groupType": "default"
     },
     {
-        "id": "177731b725387814",
-        "type": "ui-theme",
-        "name": "instrument theme",
-        "colors": {
-            "surface": "#ffffff",
-            "primary": "#0094ce",
-            "bgPage": "#eeeeee",
-            "groupBg": "#ffffff",
-            "groupOutline": "#cccccc"
-        },
-        "sizes": {
-            "density": "default",
-            "pagePadding": "12px",
-            "groupGap": "12px",
-            "groupBorderRadius": "4px",
-            "widgetGap": "12px"
-        }
-    },
-    {
         "id": "6e0e605e744ac767",
         "type": "debug",
         "z": "17870e65b49ecbdc",
@@ -109,7 +109,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1540,
+        "x": 1520,
         "y": 240,
         "wires": []
     },
