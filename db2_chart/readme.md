@@ -53,6 +53,11 @@ docker compose down
 
 ## Misc
 
+docker images
+docker ps
+docker stop [container name or hash]
+docker rmi --force [image name or hash]
+
 Some commands to start Docker directly
 
 docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node-red
