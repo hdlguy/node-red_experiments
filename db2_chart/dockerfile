@@ -13,7 +13,7 @@ COPY flows/flows.json /data/flows.json
 RUN cd && mkdir c_code
 COPY c_code/json_gen.c c_code/json_gen.c
 COPY c_code/Makefile c_code/Makefile
-RUN cd c_code && make && cd
+RUN cd c_code && make clean && make && cd
 
 
 
