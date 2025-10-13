@@ -8,55 +8,34 @@
         "env": []
     },
     {
-        "id": "9a6dc7dae7f7246a",
-        "type": "tab",
-        "label": "DB1_Flow",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "72c1e5a9ec204878",
+        "id": "7d3b36d370853b9d",
         "type": "ui-base",
-        "name": "My Dashboard",
+        "name": "virtual instrument",
         "path": "/dashboard",
+        "appIcon": "",
         "includeClientData": true,
         "acceptsClientConfig": [
             "ui-notification",
-            "ui-control",
-            "ui-chart"
+            "ui-control"
         ],
         "showPathInSidebar": false,
+        "headerContent": "page",
         "navigationStyle": "default",
-        "titleBarStyle": "default"
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": true
     },
     {
-        "id": "5075a7d8e4947586",
-        "type": "ui-theme",
-        "name": "Default Theme",
-        "colors": {
-            "surface": "#ffffff",
-            "primary": "#0094CE",
-            "bgPage": "#eeeeee",
-            "groupBg": "#ffffff",
-            "groupOutline": "#cccccc"
-        },
-        "sizes": {
-            "pagePadding": "12px",
-            "groupGap": "12px",
-            "groupBorderRadius": "4px",
-            "widgetGap": "12px"
-        }
-    },
-    {
-        "id": "39fae809f6f7fc7b",
+        "id": "0a6cef5a1c524f2d",
         "type": "ui-page",
-        "name": "Charts",
-        "ui": "72c1e5a9ec204878",
-        "path": "/charts-example",
-        "icon": "chart-box-outline",
-        "layout": "notebook",
-        "theme": "5075a7d8e4947586",
+        "name": "plot",
+        "ui": "7d3b36d370853b9d",
+        "path": "",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "177731b725387814",
         "breakpoints": [
             {
                 "name": "Default",
@@ -85,141 +64,196 @@
         "disabled": "false"
     },
     {
-        "id": "4dc3a5580f655534",
+        "id": "8047cee2b91a162e",
         "type": "ui-group",
-        "name": "Scatter Plot Group",
-        "page": "39fae809f6f7fc7b",
-        "width": "12",
-        "height": "3",
+        "name": "line plot group",
+        "page": "0a6cef5a1c524f2d",
+        "width": 6,
+        "height": 1,
         "order": 1,
-        "showTitle": false,
+        "showTitle": true,
         "className": "",
         "visible": "true",
         "disabled": "false",
         "groupType": "default"
     },
     {
-        "id": "bfb65861d4cc874b",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-light",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#1bbfff",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#0094ce",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey",
-                "palette": "light"
-            }
+        "id": "177731b725387814",
+        "type": "ui-theme",
+        "name": "instrument theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094ce",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
         },
-        "site": {
-            "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
         }
     },
     {
-        "id": "ef382137ec8e8c43",
-        "type": "ui_tab",
-        "name": "Tab 1",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
+        "id": "6e0e605e744ac767",
+        "type": "debug",
+        "z": "17870e65b49ecbdc",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1540,
+        "y": 240,
+        "wires": []
     },
     {
-        "id": "708dd1cf088e8012",
-        "type": "ui_group",
-        "name": "Waveform Display",
-        "tab": "ef382137ec8e8c43",
-        "order": 1,
-        "disp": true,
-        "width": "12",
-        "collapse": false,
-        "className": ""
+        "id": "e98bd8e3a85f779f",
+        "type": "trigger",
+        "z": "17870e65b49ecbdc",
+        "name": "",
+        "op1": "true",
+        "op2": "0",
+        "op1type": "bool",
+        "op2type": "str",
+        "duration": "-500",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "false",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 460,
+        "y": 420,
+        "wires": [
+            [
+                "a29689e4fc22deb9"
+            ]
+        ]
+    },
+    {
+        "id": "a29689e4fc22deb9",
+        "type": "exec",
+        "z": "17870e65b49ecbdc",
+        "command": "${C_BIN_PATH}/json_gen 1000",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 750,
+        "y": 380,
+        "wires": [
+            [
+                "74cd843f2c9e7be6"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "74cd843f2c9e7be6",
+        "type": "json",
+        "z": "17870e65b49ecbdc",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1290,
+        "y": 380,
+        "wires": [
+            [
+                "a924b771a10b19ba"
+            ]
+        ]
+    },
+    {
+        "id": "90cb076178cbfb95",
+        "type": "ui-button",
+        "z": "17870e65b49ecbdc",
+        "group": "8047cee2b91a162e",
+        "name": "",
+        "label": "single trigger",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 210,
+        "y": 380,
+        "wires": [
+            [
+                "a29689e4fc22deb9"
+            ]
+        ]
+    },
+    {
+        "id": "fe6d058f1765b4c9",
+        "type": "ui-switch",
+        "z": "17870e65b49ecbdc",
+        "name": "",
+        "label": "continuous trigger",
+        "group": "8047cee2b91a162e",
+        "order": 3,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 230,
+        "y": 420,
+        "wires": [
+            [
+                "e98bd8e3a85f779f"
+            ]
+        ]
     },
     {
         "id": "a924b771a10b19ba",
         "type": "ui-chart",
         "z": "17870e65b49ecbdc",
-        "group": "4dc3a5580f655534",
+        "group": "8047cee2b91a162e",
         "name": "Chart: Scatter",
         "label": "Line Plot Example",
         "order": 1,
@@ -273,345 +307,6 @@
         "interpolation": "linear",
         "x": 1480,
         "y": 380,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6e0e605e744ac767",
-        "type": "debug",
-        "z": "17870e65b49ecbdc",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1440,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "90cb076178cbfb95",
-        "type": "ui-button",
-        "z": "17870e65b49ecbdc",
-        "group": "4dc3a5580f655534",
-        "name": "",
-        "label": "single trigger",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "emulateClick": false,
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "iconPosition": "left",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "topic",
-        "topicType": "msg",
-        "buttonColor": "",
-        "textColor": "",
-        "iconColor": "",
-        "enableClick": true,
-        "enablePointerdown": false,
-        "pointerdownPayload": "",
-        "pointerdownPayloadType": "str",
-        "enablePointerup": false,
-        "pointerupPayload": "",
-        "pointerupPayloadType": "str",
-        "x": 210,
-        "y": 380,
-        "wires": [
-            [
-                "a29689e4fc22deb9"
-            ]
-        ]
-    },
-    {
-        "id": "e98bd8e3a85f779f",
-        "type": "trigger",
-        "z": "17870e65b49ecbdc",
-        "name": "",
-        "op1": "true",
-        "op2": "0",
-        "op1type": "bool",
-        "op2type": "str",
-        "duration": "-500",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "ms",
-        "reset": "false",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 460,
-        "y": 420,
-        "wires": [
-            [
-                "a29689e4fc22deb9"
-            ]
-        ]
-    },
-    {
-        "id": "fe6d058f1765b4c9",
-        "type": "ui-switch",
-        "z": "17870e65b49ecbdc",
-        "name": "",
-        "label": "continuous trigger",
-        "group": "4dc3a5580f655534",
-        "order": 3,
-        "width": "4",
-        "height": "1",
-        "passthru": false,
-        "decouple": false,
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "className": "",
-        "layout": "row-spread",
-        "clickableArea": "switch",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "x": 230,
-        "y": 420,
-        "wires": [
-            [
-                "e98bd8e3a85f779f"
-            ]
-        ]
-    },
-    {
-        "id": "a29689e4fc22deb9",
-        "type": "exec",
-        "z": "17870e65b49ecbdc",
-        "command": "${C_BIN_PATH}/json_gen 1000",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "",
-        "x": 750,
-        "y": 380,
-        "wires": [
-            [
-                "74cd843f2c9e7be6"
-            ],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "74cd843f2c9e7be6",
-        "type": "json",
-        "z": "17870e65b49ecbdc",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 1290,
-        "y": 380,
-        "wires": [
-            [
-                "a924b771a10b19ba"
-            ]
-        ]
-    },
-    {
-        "id": "357ecabea2ae1661",
-        "type": "debug",
-        "z": "9a6dc7dae7f7246a",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1440,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "e305f5067e85e295",
-        "type": "trigger",
-        "z": "9a6dc7dae7f7246a",
-        "name": "",
-        "op1": "1",
-        "op2": "0",
-        "op1type": "str",
-        "op2type": "str",
-        "duration": "-200",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "ms",
-        "reset": "false",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 440,
-        "y": 440,
-        "wires": [
-            [
-                "0f7ea3da97adc984"
-            ]
-        ]
-    },
-    {
-        "id": "0f7ea3da97adc984",
-        "type": "exec",
-        "z": "9a6dc7dae7f7246a",
-        "command": "/home/pedro/github/node-red_experiments/db2_chart/c_code/db1_json_gen 1000",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "",
-        "x": 930,
-        "y": 400,
-        "wires": [
-            [
-                "7eeb7c893e14eee3"
-            ],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "7eeb7c893e14eee3",
-        "type": "json",
-        "z": "9a6dc7dae7f7246a",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 1350,
-        "y": 400,
-        "wires": [
-            [
-                "6ca873542bd5e51d"
-            ]
-        ]
-    },
-    {
-        "id": "d433d801ee41c5b9",
-        "type": "ui_switch",
-        "z": "9a6dc7dae7f7246a",
-        "name": "",
-        "label": "Continuous Trigger",
-        "tooltip": "",
-        "group": "708dd1cf088e8012",
-        "order": 3,
-        "width": "4",
-        "height": "1",
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 210,
-        "y": 440,
-        "wires": [
-            [
-                "e305f5067e85e295"
-            ]
-        ]
-    },
-    {
-        "id": "27e51d2ac99db6c4",
-        "type": "ui_button",
-        "z": "9a6dc7dae7f7246a",
-        "name": "",
-        "group": "708dd1cf088e8012",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Single Trigger",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 200,
-        "y": 380,
-        "wires": [
-            [
-                "0f7ea3da97adc984"
-            ]
-        ]
-    },
-    {
-        "id": "6ca873542bd5e51d",
-        "type": "ui_chart",
-        "z": "9a6dc7dae7f7246a",
-        "name": "",
-        "group": "708dd1cf088e8012",
-        "order": 1,
-        "width": "12",
-        "height": "4",
-        "label": "chart",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 1510,
-        "y": 400,
         "wires": [
             []
         ]
