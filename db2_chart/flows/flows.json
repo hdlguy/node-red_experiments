@@ -79,15 +79,15 @@
         ],
         "order": 1,
         "className": "",
-        "visible": "true",
-        "disabled": "false"
+        "visible": true,
+        "disabled": false
     },
     {
         "id": "8047cee2b91a162e",
         "type": "ui-group",
         "name": "line plot group",
         "page": "0a6cef5a1c524f2d",
-        "width": 6,
+        "width": "4",
         "height": 1,
         "order": 1,
         "showTitle": true,
