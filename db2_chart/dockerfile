@@ -15,6 +15,7 @@ COPY c_code/json_gen.c c_code/json_gen.c
 COPY c_code/Makefile c_code/Makefile
 RUN cd c_code && make clean && make && cd
 
+# Install Dashboard 2.0 into Node-Red
 RUN npm install --unsafe-perm --no-update-notifier --no-fund --only=production @flowfuse/node-red-dashboard@latest
 
 
