@@ -2,7 +2,7 @@
 services:
   nodered:
     build: .
-    container_name: my-nodered
+    container_name: nodered-instrument
     ports:
       - "1880:1880"        # web UI
     volumes:

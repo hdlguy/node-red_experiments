@@ -7,7 +7,6 @@ ENV C_BIN_PATH=/usr/src/node-red/c_code
 
 # Copy your Node-RED flow
 COPY flows/flows.json /data/flows.json
-#COPY flows/settings.js /data/settings.js
 
 # Copy C command and compile
 RUN cd && mkdir c_code
