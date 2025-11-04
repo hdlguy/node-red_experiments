@@ -3,9 +3,12 @@
 This folder contains a Node-Red flow which implements a simple virtual intrument interface. It can be run locally or in a Docker container.
 
 ## Run locally
-
+- install node.js and npm
+sudo apt install nodejs npm
 - install node-red
+sudo npm install -g --unsafe-perm node-red
 - install Dashboard 2.0 plugin into Node-Red
+sudo npm install @flowfuse/node-red-dashboard
 
 - clone repo
 git clone https://github.com/hdlguy/node-red_experiments.git
