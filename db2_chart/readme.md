@@ -13,6 +13,9 @@ sudo npm install @flowfuse/node-red-dashboard
 - clone repo
 git clone https://github.com/hdlguy/node-red_experiments.git
 
+- install dashboard 2.0
+npm install --unsafe-perm --no-update-notifier --no-fund --only=production @flowfuse/node-red-dashboard@latest
+
 The flow is version controlled in this repo.  To make it run directly on this machine use this link.
 
 ln -s ~/github/node-red_experiments/db2_chart/flows/  ~/.node-red
