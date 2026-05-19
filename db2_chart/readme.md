@@ -68,12 +68,12 @@ docker compose up -d
 - open application - http://127.0.0.1:1880/dashboard
 
 - open bash shell on container
-``` 
+```
 docker exec -it my-nodered /bin/bash 
 ```
 
 - stop container
-``` 
+```
 docker compose down 
 ```
 
