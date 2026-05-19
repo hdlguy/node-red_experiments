@@ -68,21 +68,31 @@ docker compose up -d
 - open application - http://127.0.0.1:1880/dashboard
 
 - open bash shell on container
-``` docker exec -it my-nodered /bin/bash ```
+``` 
+docker exec -it my-nodered /bin/bash 
+```
 
 - stop container
-``` docker compose down ```
+``` 
+docker compose down 
+```
 
 
 ## Misc
-``` docker images ```
-``` docker ps ```
-``` docker stop [container name or hash] ```
-``` docker rmi --force [image name or hash] ```
+``` 
+docker images
+docker ps
+docker stop [container name or hash]
+docker rmi --force [image name or hash]
+```
 Some commands to start Docker directly
-``` docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node-red ```
-``` docker run -it -p 1880:1880 -v node_red_data:/data nodered/node-red ```
-``` docker run -it -p 1880:1880 -v debian_data:/data --name deb1 debian ```
+``` 
+docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node-red
+docker run -it -p 1880:1880 -v node_red_data:/data nodered/node-red
+docker run -it -p 1880:1880 -v debian_data:/data --name deb1 debian 
+```
 To open a bash shell on the running container
-``` docker exec -it my-nodered /bin/bash ```
+``` 
+docker exec -it my-nodered /bin/bash 
+```
 
