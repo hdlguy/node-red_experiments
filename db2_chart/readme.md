@@ -4,7 +4,9 @@ This folder contains a Node-Red flow which implements a simple virtual intrument
 
 ## Run locally
 - install node.js and npm
-``` sudo apt install nodejs npm ```
+``` 
+sudo apt install nodejs npm 
+```
 
 - install node-red
 ``` sudo npm install -g --unsafe-perm node-red ```
