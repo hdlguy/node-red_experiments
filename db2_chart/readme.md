@@ -24,6 +24,7 @@ ln -s ~/github/node-red_experiments/db2_chart/flows/  ~/.node-red
 node-red
 
 - open the flow 
+
 http://127.0.0.1:1880/
 
 - open application
